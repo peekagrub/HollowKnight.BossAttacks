@@ -9,6 +9,8 @@ namespace BossAttacks
     {
         public bool ToggleButtonInsideMenu => true;
 
+        public string GetMenuButtonText() => $"Boss Attacks";
+
         public MenuScreen GetMenuScreen(MenuScreen modListMenu, ModToggleDelegates? toggle)
         {
             _menuRef = new Menu("Boss Attacks", new Element[]
@@ -41,7 +43,6 @@ namespace BossAttacks
 #endif
             });
 
-            _menuRef.SetMenuButtonNameAndDesc(BossAttacks.Instance, "Boss Attacks");
             return _menuRef.GetMenuScreen(modListMenu);
         }
 
